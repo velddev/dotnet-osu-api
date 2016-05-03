@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>osu.NET</id>
+    <version>0.1</version>
+    <title>osuNET</title>
+    <authors>velddev</authors>
+    <owners>velddev</owners>
+    <licenseUrl>https://en.wikipedia.org/wiki/MIT_License</licenseUrl>
+    <projectUrl>https://github.com/velddev/osunet</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>easy-to-use osu! api for .NET</description>
+    <releaseNotes>first release</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>osu C#</tags>
+	<dependencies>
+		<dependency id="Newtonsoft.Json" version="8.0.3"/>
+	</dependencies>
+  </metadata>
+</package>
