@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace osu.objects
+namespace osu.Objects
 {
-    public class User
+    public class OsuPlayer
     {
         public string user_id;
         public string username;

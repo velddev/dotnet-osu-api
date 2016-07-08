@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using osu.objects;
+using osu.Objects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,15 +23,15 @@ namespace osu
         /// </summary>
         /// <param name="name">user's name</param>
         /// <returns></returns>
-        public User GetUser(string name)
+        public OsuPlayer GetUser(string name, GameMode mode = GameMode.OSU)
         {
-            string data = DownloadData("api/get_user?&k=" + credentials.GetKey() + "&u=" + name);
+            string data = DownloadData("api/get_user?&k=" + credentials.GetKey() + "&u=" + name + "&m=" + (int)mode);
             if (data != "")
             {
-                List<User> d = JsonConvert.DeserializeObject<List<User>>(data);
+                List<OsuPlayer> d = JsonConvert.DeserializeObject<List<OsuPlayer>>(data);
                 return d[0];
             }
-            return new User();
+            return new OsuPlayer();
         }
 
         /// <summary>
@@ -39,15 +39,15 @@ namespace osu
         /// </summary>
         /// <param name="id">user's id</param>
         /// <returns></returns>
-        public User GetUser(long id)
+        public OsuPlayer GetUser(long id, GameMode mode = GameMode.OSU)
         {
-            string data = DownloadData("api/get_user?&k=" + credentials.GetKey() + "&u=" + id);
+            string data = DownloadData("api/get_user?&k=" + credentials.GetKey() + "&u=" + id+ "&m=" + (int)mode);
             if (data != "")
             {
-                List<User> d = JsonConvert.DeserializeObject<List<User>>(data);
+                List<OsuPlayer> d = JsonConvert.DeserializeObject<List<OsuPlayer>>(data);
                 return d[0];
             }
-            return new User();
+            return new OsuPlayer();
         }
 
         private string DownloadData(string url)
@@ -64,5 +64,10 @@ namespace osu
             }
             return "";
         }
+    }
+
+    public enum GameMode
+    {
+        OSU, TAIKO, CATCHTHEBEAT, MANIA
     }
 }
