@@ -8,23 +8,25 @@ namespace osu.Objects
 {
     public class OsuPlayer
     {
-        public string user_id;
-        public string username;
-        public string count300;
-        public string count100;
-        public string count50;
-        public string playcount;
-        public string ranked_score;
-        public string total_score;
-        public string pp_rank;
-        public string level;
-        public string pp_raw;
-        public string accuracy;
-        public string count_rank_ss;
-        public string count_rank_s;
-        public string count_rank_a;
-        public string country;
-        public string pp_country_rank;
-        public List<string> events;
+        public string user_id = "0";
+        public string username = "not found";
+        public string count300 = "0";
+        public string count100 = "0";
+        public string count50 = "0";
+        public string playcount = "0";
+        public string ranked_score = "0";
+        public string total_score = "0";
+        public string pp_rank = "0";
+        public string level = "0";
+        public string pp_raw = "0";
+        public string accuracy = "0";
+        public string count_rank_ss = "0";
+        public string count_rank_s= "0";
+        public string count_rank_a= "0";
+        public string country = "US";
+        public string pp_country_rank= "0";
+        public List<string> events = new List<string>();
+
+        public bool success;
     }
 }
