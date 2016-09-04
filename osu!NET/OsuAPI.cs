@@ -29,11 +29,17 @@ namespace osu
             if (data != "")
             {
                 List<OsuPlayer> d = JsonConvert.DeserializeObject<List<OsuPlayer>>(data);
-                if (d[0].user_id != "0") d[0].success = true;
-
-                return d[0];
+                if (d.Count > 0)
+                {
+                    if (d[0].user_id != "0")
+                    {
+                        d[0].success = true;
+                        return d[0];
+                    }
+                }
+                return null;
             }
-            return new OsuPlayer();
+            return null;
         }
 
         /// <summary>
