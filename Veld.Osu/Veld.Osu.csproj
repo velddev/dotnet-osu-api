@@ -3,6 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <UserSecretsId>5ea9fd93-a85c-4577-9240-979b45be20b7</UserSecretsId>
+    <Authors>Velddev</Authors>
+    <Company>Velddev</Company>
+    <Description>osu! game API wrapper</Description>
+    <Version>0.1.0</Version>
+    <Copyright>Mike Veldsink</Copyright>
+    <PackageProjectUrl>https://github.com/velddev/dotnet-osu-api</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/velddev/dotnet-osu-api</RepositoryUrl>
+    <PackageTags>osu api wrapper async dotnet</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
