@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veld.Osu", "Veld.Osu\Veld.Osu.csproj", "{838D8B5E-AE67-48C8-B3B2-EDF4D8C9FBB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Veld.Osu", "Veld.Osu\Veld.Osu.csproj", "{838D8B5E-AE67-48C8-B3B2-EDF4D8C9FBB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veld.Osu.Tests", "Veld.Osu.Tests\Veld.Osu.Tests.csproj", "{C471D717-1F32-47B5-A30B-55F82E400749}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Veld.Osu.Tests", "Veld.Osu.Tests\Veld.Osu.Tests.csproj", "{C471D717-1F32-47B5-A30B-55F82E400749}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veld.Osu.RuntimeTest", "Veld.Osu.RuntimeTest\Veld.Osu.RuntimeTest.csproj", "{F8629005-0823-4F90-A40E-FA4D41FDCDF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C471D717-1F32-47B5-A30B-55F82E400749}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C471D717-1F32-47B5-A30B-55F82E400749}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C471D717-1F32-47B5-A30B-55F82E400749}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8629005-0823-4F90-A40E-FA4D41FDCDF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8629005-0823-4F90-A40E-FA4D41FDCDF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8629005-0823-4F90-A40E-FA4D41FDCDF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8629005-0823-4F90-A40E-FA4D41FDCDF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
