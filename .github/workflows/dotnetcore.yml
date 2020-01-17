@@ -12,7 +12,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.0.2
+        dotnet-version: 3.0.102
     - name: Test with dotnet
       run: dotnet test Veld.Osu.Tests/Veld.Osu.Tests.csproj --collect:"Code Coverage"
 
