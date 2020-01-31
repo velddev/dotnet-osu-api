@@ -84,8 +84,8 @@
             ScoreTotal = long.Parse(response.ScoreTotal);
             RankGlobal = int.Parse(response.RankGlobal);
             Level = double.Parse(response.Level);
-            PerformancePoints = long.Parse(response.PerformancePoints);
-            Accuracy = long.Parse(response.Accuracy);
+            PerformancePoints = double.Parse(response.PerformancePoints);
+            Accuracy = double.Parse(response.Accuracy);
             CountRankSs = int.Parse(response.CountRankSs);
             CountRankS = int.Parse(response.CountRankS);
             CountRankA = int.Parse(response.CountRankA);
