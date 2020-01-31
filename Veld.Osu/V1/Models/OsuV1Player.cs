@@ -77,21 +77,21 @@
             Username = response.Username;
             DateJoined = DateTime.Parse(response.DateJoined);
             Count300 = long.Parse(response.Count300);
-            Count100 = long.Parse(response.Count300);
-            Count50 = long.Parse(response.Count300);
+            Count100 = long.Parse(response.Count100);
+            Count50 = long.Parse(response.Count50);
             PlayCount = int.Parse(response.PlayCount);
             ScoreRanked = long.Parse(response.ScoreRanked);
             ScoreTotal = long.Parse(response.ScoreTotal);
             RankGlobal = int.Parse(response.RankGlobal);
             Level = double.Parse(response.Level);
-            PerformancePoints = long.Parse(response.Count300);
-            Accuracy = long.Parse(response.Count300);
+            PerformancePoints = long.Parse(response.PerformancePoints);
+            Accuracy = long.Parse(response.Accuracy);
             CountRankSs = int.Parse(response.CountRankSs);
             CountRankS = int.Parse(response.CountRankS);
             CountRankA = int.Parse(response.CountRankA);
             Country = response.Country;
             TimePlayed = TimeSpan.FromSeconds(long.Parse(response.TotalSecondsPlayed));
-            RankCountry = int.Parse(response.Count300);
+            RankCountry = int.Parse(response.RankCountry);
             Events = response.Events;
         }
     }
