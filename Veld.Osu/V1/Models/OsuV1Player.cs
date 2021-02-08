@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using Veld.Osu.Models;
 
     internal class OsuV1Player : IOsuPlayer
@@ -64,7 +65,25 @@
         public TimeSpan TimePlayed { get; }
 
         /// <inheritdoc />
-        public IReadOnlyList<string> Events { get; }
+        public IReadOnlyList<IPlayerEvents> Events { get; }
+
+        internal class InternalPlayerEvents : IPlayerEvents
+        {
+            /// <inheritdoc />
+            public string DisplayHtml { get; set; }
+
+            /// <inheritdoc />
+            public int BeatmapId { get; set; }
+
+            /// <inheritdoc />
+            public int BeatmapSetId { get; set; }
+
+            /// <inheritdoc />
+            public DateTime Date { get; set; }
+
+            /// <inheritdoc />
+            public int EpicFactor { get; set; }
+        }
 
         internal OsuV1Player(OsuV1PlayerResponse response)
         {
@@ -92,7 +111,15 @@
             Country = response.Country;
             TimePlayed = TimeSpan.FromSeconds(long.Parse(response.TotalSecondsPlayed));
             RankCountry = int.Parse(response.RankCountry);
-            Events = response.Events;
+            Events = response.Events.Select(x => new InternalPlayerEvents
+            {
+                DisplayHtml = x.DisplayHtml,
+                Date = DateTime.Parse(x.Date),
+                BeatmapSetId = int.Parse(x.BeatmapSetId),
+                BeatmapId = int.Parse(x.BeatmapId),
+                EpicFactor = int.Parse(x.EpicFactor)
+            }).Cast<IPlayerEvents>()
+                .ToList();
         }
     }
 }

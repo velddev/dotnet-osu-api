@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>5ea9fd93-a85c-4577-9240-979b45be20b7</UserSecretsId>
     <Authors>Velddev</Authors>
     <Company>Velddev</Company>
     <Description>osu! game API wrapper</Description>
-    <Version>0.1.2</Version>
+    <Version>0.2</Version>
     <Copyright>Mike Veldsink</Copyright>
     <PackageProjectUrl>https://github.com/velddev/dotnet-osu-api</PackageProjectUrl>
     <RepositoryUrl>https://github.com/velddev/dotnet-osu-api</RepositoryUrl>
@@ -14,7 +14,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Miki.Net.Http" Version="3.0.1" />
     <PackageReference Include="System.Text.Json" Version="4.7.0" />
   </ItemGroup>
 

@@ -2,6 +2,8 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     public interface IOsuPlayer
     {
@@ -103,6 +105,19 @@
         /// <summary>
         /// Recent events for the player.
         /// </summary>
-        public IReadOnlyList<string> Events { get; }
+        public IReadOnlyList<IPlayerEvents> Events { get; }
+    }
+
+    public interface IPlayerEvents
+    {
+        string DisplayHtml { get; }
+        
+        int BeatmapId { get; }
+        
+        int BeatmapSetId { get; }
+        
+        DateTime Date { get; }
+        
+        int EpicFactor { get; }
     }
 }

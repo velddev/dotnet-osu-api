@@ -97,6 +97,30 @@
 
         [JsonPropertyName("events")]
         [DataMember(Name = "events")]
-        public List<string> Events { get; set; }
+        public List<PlayerEvents> Events { get; set; }
+    }
+
+    [DataContract]
+    internal class PlayerEvents
+    {
+        [JsonPropertyName("count_rank_a")]
+        [DataMember(Name = "count_rank_a")]
+        public string DisplayHtml { get; set; }
+
+        [JsonPropertyName("beatmap_id")]
+        [DataMember(Name = "beatmap_id")]
+        public string BeatmapId { get; set; }
+
+        [JsonPropertyName("beatmapset_id")]
+        [DataMember(Name = "beatmapset_id")]
+        public string BeatmapSetId { get; set; }
+
+        [JsonPropertyName("date")]
+        [DataMember(Name = "date")]
+        public string Date { get; set; }
+
+        [JsonPropertyName("epicfactor")]
+        [DataMember(Name = "date")]
+        public string EpicFactor { get; set; }
     }
 }
