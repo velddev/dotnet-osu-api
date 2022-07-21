@@ -32,6 +32,16 @@ namespace Veld.Osu.V1
                 BaseAddress = new Uri(BaseUrl)
             };
         }
+        public OsuApiClientV1(string key, HttpClient client)
+        {
+            if(string.IsNullOrWhiteSpace(key))
+            {
+                throw new ArgumentNullException(nameof(key));
+            }
+
+            credentials = new OsuCredentials(key);
+            httpClient = client;
+        }
 
         /// <inheritdoc/>
         public async Task<IOsuPlayer> GetPlayerAsync(string name, GameMode mode = GameMode.Osu)
